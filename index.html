@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Codificando & Decodificando</title>
+  </head>
+  <body>
+    
+    <div class="principal">
+      <form class="forms "name="formulario">
+
+        <fieldset>
+          <h2>Mensagem por código</h2>
+
+          <div class="entrada">
+            <input type="text" name="texto" id="texto" class="inputTexto" placeholder="Mensagem enviada"/>
+          </div>
+
+          <div>
+            <label for="option">Criptografia</label>
+            <select name="chooseCod" class="chooseCod" id="escolherCod" required>
+              <option value="Base64" id="base64">Base64</option>
+              <option value="cCesar" id="cCesar">Cifra de César</option>
+            </select>
+          </div>
+
+          <div class="incremento" style="display: none" id="valorIncremento">
+            <p>Incremento</p>
+            <input type="number" class="inputIncremento" id="numeroIncrementos" default="0" min="1" max="26" value="1" />
+          </div>
+
+          <div class="codif">
+            <input type="radio" name="codific" id="codificar" class="radioBtn" value="codificar" /><label for="codificar">Codificar</label>
+            <input type="radio" name="codific" id="decodificar"  class="radioBtn" value="decodificar" /><label for="decodificar">Decodificar</label>
+          </div>
+
+          <div class="areabtn">
+            <button type="submit" class="btn" name="codMsg" id="submit">Codificar mensagem</button>
+          </div>
+
+          <div class="saida">
+            <textarea disabled class="areaSaida" id="saidaTexto" placeholder="mensagem recebida"></textarea>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
